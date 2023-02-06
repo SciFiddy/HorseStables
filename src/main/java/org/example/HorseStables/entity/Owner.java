@@ -1,12 +1,17 @@
 package org.example.HorseStables.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import org.springframework.data.annotation.Id;
+
 import java.sql.Date;
 
 @Entity
 public class Owner {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue
     @Column(name = "owner_id")
     private int ownerID;
     private String ownerName;

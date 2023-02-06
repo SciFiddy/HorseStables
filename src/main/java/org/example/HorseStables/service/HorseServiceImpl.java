@@ -1,5 +1,6 @@
 package org.example.HorseStables.service;
 
+import jakarta.annotation.PostConstruct;
 import org.example.HorseStables.entity.Horse;
 import org.example.HorseStables.repository.HorseRepository;
 import org.example.HorseStables.repository.OwnerRepository;
@@ -26,6 +27,12 @@ public class HorseServiceImpl implements HorseService{
     @Override
     public List<Horse> fetchHorseList() {
         return (List<Horse>) horseRepository.findAll();
+    }
+
+    @PostConstruct
+    public String showHorseServiceClass(){
+        System.out.println(horseRepository.toString());
+        return horseRepository.toString();
     }
 
     @Override

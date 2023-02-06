@@ -1,12 +1,19 @@
 package org.example.HorseStables.entity;
 
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 
-import javax.persistence.*;
+import java.util.UUID;
+//https://zetcode.com/springboot/crudrepository/
+
 
 
 @Entity
@@ -14,7 +21,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "Horses")
 public class Horse {
 
     @Id
